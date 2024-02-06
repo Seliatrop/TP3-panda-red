@@ -1,6 +1,4 @@
-//stringmessages.js
-import { LoremIpsum } from "lorem-ipsum";
-import { getConfigNumber } from "../config/config";
+import {LoremIpsum} from "lorem-ipsum";
 
 const lorem = new LoremIpsum({
     sentencesPerParagraph: {
@@ -11,10 +9,9 @@ const lorem = new LoremIpsum({
         max: 16,
         min: 4
     }
-});
+})
 
-export const getStringMessage = (customNumberWord) => {
-    const configNumber = getConfigNumber();
-    const numberWord = customNumberWord || configNumber.integerSize;
+
+export const getStringMessage =  (numberWord) => {
     return lorem.generateWords(numberWord);
-};
+}
