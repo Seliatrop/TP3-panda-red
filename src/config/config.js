@@ -1,3 +1,4 @@
+//config.js
 import 'dotenv/config'
 
 
@@ -34,5 +35,5 @@ export const getDebug = () => {
 }
 
 export const getLocalBroker = () => {
-    return process.env.HOST_IP !== ""
+    return process.env.HOST_IP != null && process.env.HOST_IP !== "";
 }

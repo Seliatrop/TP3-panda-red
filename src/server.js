@@ -1,3 +1,5 @@
+//server.js
+
 import * as Admin from "./redpanda/admin.js"
 import * as Producer from "./redpanda/producer.js"
 
@@ -18,7 +20,7 @@ async function start() {
     console.log("Connecting...")
     const timeRetour = getTimeOut()
 
-    setInterval(() => {
+const intervalId = setInterval(() => {
         const user = getUser()
         const message = typeMessage === "texte" ?
             getStringMessage(3) :
