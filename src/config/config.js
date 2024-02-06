@@ -1,5 +1,8 @@
 //config.js
-import 'dotenv/config'
+// Ajoutez une référence à NUMBER_WORD
+import 'dotenv/config';
+const numberWord = process.env.NUMBER_WORD || 3; // Valeur par défaut si non définie
+
 
 
 export const getConfigNumber = () => {
